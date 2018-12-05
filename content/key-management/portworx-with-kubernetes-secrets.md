@@ -7,15 +7,16 @@ disableprevnext: true
 series: key-management
 ---
 
+
 Portworx can integrate with Kubernetes Secrets to store your encryption keys/secrets and credentials. This guide will help configure Portworx with Kubernetes Secrets. Kubernetes Secrets can then be used to store Portworx secrets for Volume Encryption and Cloud Credentials.
 
-#### Configuring Kubernetes Secrets with Portworx {#configuring-kubernetes-secrets-with-portworx}
+### Configuring Kubernetes Secrets with Portworx {#configuring-kubernetes-secrets-with-portworx}
 
-**New installation**
+#### New installation
 
 When generating the [Portworx Kubernetes spec file](https://install.portworx.com/), select `Kubernetes` from the “Secrets type” list. For more details on how to generate Portworx spec for Kubernetes, [click here](/portworx-install-with-kubernetes).
 
-**Existing installation**
+#### Existing installation
 
 **Permissions to access secrets**
 
@@ -98,7 +99,7 @@ Add the `"-secret_type", "k8s"` arguments to the `portworx` container in the dae
 
 Editing the daemonset will also restart all the Portworx pods, which will consume the modified _config.json_.
 
-#### Creating secrets with Kubernetes {#creating-secrets-with-kubernetes}
+### Creating secrets with Kubernetes {#creating-secrets-with-kubernetes}
 
 The following section describes the key generation process with Portworx and Kubernetes which can be used for encrypting volumes. For more information about encrypted volumes, click on the links below.
 

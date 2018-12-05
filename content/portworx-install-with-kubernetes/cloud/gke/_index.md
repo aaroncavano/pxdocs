@@ -23,7 +23,7 @@ export PROJECT_NAME=<PUT-YOUR-PROJECT-NAME-HERE>
 ```text
 gcloud config set project $PROJECT_NAME
 gcloud config set compute/region us-east1
-gcloud config set compute/zone us-east1-a
+gcloud config set compute/zone us-east1-b
 gcloud components update
 ```
 
@@ -39,7 +39,7 @@ Below command creates a 3-node zonal cluster in us-east1-a with auto-scaling ena
 
 ```text
 gcloud container clusters create px-demo \
-    --zone us-east1-a \
+    --zone us-east1-b \
     --disk-type=pd-ssd \
     --disk-size=50GB \
     --labels=portworx=gke \

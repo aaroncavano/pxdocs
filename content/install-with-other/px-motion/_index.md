@@ -6,6 +6,7 @@ description: How to migrate volumes across clusters
 series: px-motion
 aliases:
   - /cloud-references/migration/migration-pxctl.html
+  - /cloud-references/migration/migration-pxctl
 ---
 
 ## Overview

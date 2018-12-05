@@ -81,7 +81,7 @@ cat /etc/pwx/config.json
 }
 ```
 
-#### Using AWS EC2 Role Credentials {#using-aws-ec2-role-credentials}
+### Using AWS EC2 Role Credentials {#using-aws-ec2-role-credentials}
 
 Portworx can authenticate with AWS using AWS SDK’s EC2RoleCredentials Provider. Follow [these](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html) instructions to create an EC2 role. Make sure you provide the following access to KMS in your policy associated with EC2 role.
 
@@ -123,7 +123,7 @@ Along with the EC2 role you will still need to provide `AWS_CMK` and `AWS_REGION
 }
 ```
 
-#### Using PX CLI to authenticate with AWS {#using-px-cli-to-authenticate-with-aws}
+### Using PX CLI to authenticate with AWS {#using-px-cli-to-authenticate-with-aws}
 
 If you do not wish to set AWS environment variables, you can authenticate PX with AWS using PX CLI. Run the following commands:
 

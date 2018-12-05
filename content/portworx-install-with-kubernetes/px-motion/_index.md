@@ -6,6 +6,7 @@ description: How to migrate stateful applications on Kubernetes
 series: px-motion
 aliases:
   - /cloud-references/migration/migration-stork.html
+  - /cloud-references/migration/migration-stork
 ---
 
 ## Pre-requisites

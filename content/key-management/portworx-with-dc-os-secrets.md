@@ -19,7 +19,7 @@ Secrets is an DC/OS Enterprise only feature
 Supported from PX Enterprise 1.4 onwards
 {{</info>}}
 
-#### Configuring DC/OS Secrets with Portworx {#configuring-dcos-secrets-with-portworx}
+### Configuring DC/OS Secrets with Portworx {#configuring-dcos-secrets-with-portworx}
 
 **Configuring permissions for Secrets**
 
@@ -64,7 +64,7 @@ You need to restart Portworx for the _config.json_ to take effect:
 sudo systemctl restart portworx
 ```
 
-#### Key generation with DC/OS {#key-generation-with-dcos}
+### Key generation with DC/OS {#key-generation-with-dcos}
 
 The following sections describe the key generation process with Portworx and DC/OS which can be used for encrypting volumes. For more information about encrypted volumes, [click here](/reference/cli/encrypted-volumes).
 

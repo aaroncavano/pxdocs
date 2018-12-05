@@ -9,7 +9,7 @@ series: key-management
 
 Portworx can integrate with Vault to store your encryption keys/secrets, credentials or passwords. This guide will get a Portworx cluster connected to a Vault endpoint. The vault endpoint could be used to store secrets that will be used for encrypting volumes.
 
-#### Setting up Vault {#setting-up-vault}
+### Setting up Vault {#setting-up-vault}
 
 Peruse [this section](https://www.vaultproject.io/docs/install) for help on setting up Vault in your setup. This includes installation, setting up policies and configuring secrets.
 
@@ -33,7 +33,7 @@ During installation,
 
 If you already have a running Portworx installation, see the section _Adding Vault Credentials to config.json_ below.
 
-#### Portworx vault environment variables {#portworx-vault-environment-variables}
+### Portworx vault environment variables {#portworx-vault-environment-variables}
 
 Based on your vault configuration provide the following environment variables to Portworx.
 
@@ -96,7 +96,7 @@ If Vault is configured strictly with policies then the Vault Token provided to P
 
 All the above Vault related fields as well as the cluster secret key can be set using Portworx CLI which is explained in the next section.
 
-#### Adding Vault Credentials to config.json {#adding-vault-credentials-to-configjson}
+### Adding Vault Credentials to config.json {#adding-vault-credentials-to-configjson}
 
 This section is relevant for either of the below 2 scenarios
 
@@ -126,7 +126,7 @@ cat /etc/pwx/config.json
 }
 ```
 
-#### Key generation with Vault {#key-generation-with-vault}
+### Key generation with Vault {#key-generation-with-vault}
 
 The following sections describe the key generation process with Portworx and Vault which can be used for encrypting volumes. More info about encrypted volumes [here](/reference/cli/encrypted-volumes)
 
