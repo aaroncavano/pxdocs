@@ -24,22 +24,22 @@ script:
   - export VERSIONS_TAG=$(echo -n "$VERSIONS_CURRENT" | sed 's/\./-/g')
   - export ALGOLIA_INDEX_NAME=$VERSIONS_TAG
   # build images
-  - make image
+  - travis_retry make image
   # publish site -> public
   - make publish-docker
   # build the deployment image
-  - make deployment-image
+  - travis_retry make deployment-image
   # start a container using the deployment image
   - make start-deployment-container
   # check the links in the deployment container
-  - make check-links
+  - travis_retry make check-links
   # if this is a pull request then we don't want to update algolia or deploy
   - if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then exit 0; fi
   # this checks if the current branch is present in the BRANCH_VERSION_CONFIG variable if exists if not
   - if [ "${TRAVIS_PULL_REQUEST}" == "false" ] && [ "$(bash themes/pxdocs-tooling/deploy/scripts/versions.sh should-build-current-branch)" != "yes" ]; then exit 0; fi
   # update the algolia index
-  - make search-index-image
-  - make search-index-docker
+  - travis_retry make search-index-image
+  - travis_retry make search-index-docker
   # connect the GCLOUD_SERVICE_ACCOUNT_TOKEN, GCP_PROJECT_ID, GCP_ZONE and GCP_CLUSTER_ID vars -> gcloud and kubectl
   - bash themes/pxdocs-tooling/deploy/scripts/ci_connect.sh
   # push the image to gcr
